@@ -1,6 +1,202 @@
-<h1>Pagina del Medio CLimatico</h1>
-<ul>
-    <li><a href="jose.html">Pagina 1</a></li>
-    <li><a href="luis.html">Pagina 2</a></li>
-    <li><a href="yazmin.html">Pagina 3</a></li>
-</ul>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardianes del Clima | Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos Generales y Reseteo */
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* Encabezado y Navegación */
+        header {
+            background-color: #ffffff;
+            border-bottom: 2px solid #e0e0e0;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1.site-title {
+            font-family: 'Merriweather', serif;
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            margin-left: 25px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* Sección de Héroe (llamativo) */
+        .hero-section {
+            background-color: #34495e;
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 30px;
+        }
+        .hero-section h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.5em;
+            margin: 0 0 15px 0;
+        }
+        .hero-section p {
+            font-size: 1.1em;
+            max-width: 600px;
+            margin: auto;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 12px 25px;
+            margin-top: 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #27ae60;
+        }
+
+        /* Contenido Principal y Secciones */
+        .main-content {
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-radius: 8px;
+        }
+        .section-title {
+            font-family: 'Merriweather', serif;
+            font-size: 1.8em;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #3498db;
+            margin: 10px auto 0;
+        }
+        .team-info {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .team-logo {
+            flex-shrink: 0;
+        }
+        .team-logo img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .team-description {
+            flex-grow: 1;
+        }
+        .team-description h3 {
+            font-size: 1.5em;
+            color: #34495e;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        /* Pie de Página */
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+            background-color: #2c3e50;
+            color: #fff;
+            font-size: 0.9em;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <h1 class="site-title">Página del Medio CLimático</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Pagina 1</a></li>
+                    <li><a href="#">Pagina 2</a></li>
+                    <li><a href="#">Pagina 3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h2>Guardianes del Clima</h2>
+                <p>Nuestra misión es educar y empoderar a la comunidad a través de información precisa y soluciones prácticas para combatir el cambio climático. Un futuro sostenible es posible con la acción de todos.</p>
+                <a href="#" class="cta-button">Conoce Más</a>
+            </div>
+        </section>
+
+        <div class="container main-content">
+            <h2 class="section-title">Acerca de Nuestro Equipo</h2>
+            <div class="team-info">
+                <div class="team-logo">
+                    <img src="https://assets.website-files.com/5f94a737482386b02660a92d/5f94a737482386121460ab50_Untitled%20design%20(74).png" alt="Logo del Equipo">
+                </div>
+                <div class="team-description">
+                    <h3>Guardianes del Clima</h3>
+                    <p>Somos un grupo de profesionales apasionados por la sostenibilidad y la investigación ambiental. Nuestro equipo está compuesto por científicos, analistas de datos y comunicadores dedicados a presentar información compleja de manera clara y accesible para todos. Trabajamos con la convicción de que el conocimiento es la herramienta más poderosa para generar un cambio positivo.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Guardianes del Clima. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

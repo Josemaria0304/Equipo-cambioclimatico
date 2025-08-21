@@ -29,6 +29,12 @@
             padding: 40px 0;
             border-bottom: 2px solid #2c3e50;
             margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1, header p {
+            margin: 0;
         }
         h1 {
             font-family: 'Merriweather', serif;
@@ -124,13 +130,37 @@
             font-size: 0.9em;
             color: #777;
         }
+        .back-btn {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .back-btn:hover {
+            background-color: #2980b9;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .header-text {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Análisis y Estrategias para Mitigar el Cambio Climático</h1>
-            <p>Una guía exhaustiva sobre las causas, efectos y las acciones más efectivas para un futuro sostenible.</p>
+            <a href="index.html" class="back-btn">← Volver a Inicio</a>
+            <div class="header-text">
+                <h1>Análisis y Estrategias para Mitigar el Cambio Climático</h1>
+                <p>Una guía exhaustiva sobre las causas, efectos y las acciones más efectivas para un futuro sostenible.</p>
+            </div>
         </header>
         
         <nav class="toc">
