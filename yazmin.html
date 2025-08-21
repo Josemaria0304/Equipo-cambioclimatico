@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Casos de Cambio Climático</title>
+  <style>
+    :root{
+      --bg:#0f172a;
+      --card:#111827;
+      --muted:#94a3b8;
+      --text:#e5e7eb;
+      --accent:#22c55e;
+      --border:#1f2937;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
+      background:linear-gradient(180deg,#0b1220, #0f172a 30%);
+      color:var(--text);
+    }
+    header{
+      padding:28px 16px;
+      border-bottom:1px solid var(--border);
+      position:sticky;top:0;background:rgba(15,23,42,.85);backdrop-filter:blur(8px)
+    }
+    .wrap{max-width:1100px;margin:auto}
+    h1{margin:0 0 6px 0;font-size:28px;letter-spacing:.2px}
+    p.sub{margin:0;color:var(--muted)}
+    .controls{
+      margin:18px 0 8px;
+      display:flex;gap:10px;flex-wrap:wrap
+    }
+    input[type="search"], select{
+      background:#0b1220;border:1px solid var(--border);color:var(--text);
+      padding:10px 12px;border-radius:10px;outline:none;min-width:220px
+    }
+    .grid{
+      display:grid;gap:16px;
+      grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+      padding:16px
+    }
+    .card{
+      background:var(--card);border:1px solid var(--border);
+      border-radius:16px;overflow:hidden;display:flex;flex-direction:column
+    }
+    .tag{
+      display:inline-block;font-size:12px;color:#052e16;background:#22c55e33;
+      border:1px solid #14532d;padding:4px 8px;border-radius:999px;margin:10px 10px 0 auto
+    }
+    .card h3{margin:10px 14px 0 14px;font-size:18px}
+    .meta{margin:6px 14px;color:var(--muted);font-size:13px}
+    .card p{margin:8px 14px 14px 14px;line-height:1.45}
+    footer{color:var(--muted);text-align:center;padding:28px}
+    .empty{display:none;text-align:center;color:var(--muted);padding:24px}
+    .credits{font-size:12px;color:var(--muted)}
+    .bar{height:4px;background:linear-gradient(90deg,var(--accent),#60a5fa);opacity:.5}
+  </style>
+</head>
+<body>
+  <div class="bar"></div>
+  <header>
+    <div class="wrap">
+      <h1>Casos de Cambio Climático</h1>
+      <p class="sub">Ejemplos reales de impactos en calor, incendios, sequías, inundaciones, océanos, salud, agricultura, ciclones y criósfera.</p>
+      <div class="controls">
+        <input id="q" type="search" placeholder="Buscar por país, ciudad o palabra clave…" />
+        <select id="cat">
+          <option value="todas">Todas las categorías</option>
+          <option value="calor">Calor extremo</option>
+          <option value="incendios">Incendios</option>
+          <option value="sequía">Sequía</option>
+          <option value="inundación">Lluvias e inundaciones</option>
+          <option value="oceanos">Océanos y costas</option>
+          <option value="salud">Salud</option>
+          <option value="agricultura">Agricultura</option>
+          <option value="ciclones">Ciclones y huracanes</option>
+          <option value="criosfera">Glaciares y nieve</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="grid" class="grid">
+      <!-- Cada tarjeta es un caso -->
+      <article class="card" data-cat="calor" data-text="ola de calor urbana islas de calor mortalidad">
+        <span class="tag">Calor extremo</span>
+        <h3>Olas de calor más intensas en ciudades</h3>
+        <div class="meta">Ciudades globales · Tendencia</div>
+        <p>El aumento de temperaturas y el efecto de isla de calor urbana elevan los riesgos de golpes de calor, consumo eléctrico y demanda de agua, afectando sobre todo a personas mayores y trabajadores al aire libre.</p>
+      </article>
+
+      <article class="card" data-cat="incendios" data-text="incendios forestales temporada mas larga humo calidad del aire">
+        <span class="tag">Incendios</span>
+        <h3>Temporadas de incendios más largas</h3>
+        <div class="meta">Zonas mediterráneas y boreales · Tendencia</div>
+        <p>Sequías más frecuentes y olas de calor secan vegetación y alargan la temporada de incendios, generando humo que deteriora la calidad del aire a miles de kilómetros.</p>
+      </article>
+
+      <article class="card" data-cat="sequía" data-text="sequía deficit hidrico embalses riego">
+        <span class="tag">Sequía</span>
+        <h3>Déficit hídrico y embalses bajos</h3>
+        <div class="meta">Regiones semiáridas · Años secos</div>
+        <p>Precipitaciones reducidas y evaporación elevada disminuyen niveles de embalses, restringen riego agrícola y obligan a medidas de ahorro de agua.</p>
+      </article>
+
+      <article class="card" data-cat="inundación" data-text="precipitaciones extremas inundaciones repentinas desbordamientos">
+        <span class="tag">Lluvias e inundaciones</span>
+        <h3>Precipitaciones extremas más intensas</h3>
+        <div class="meta">Regiones monzónicas y templadas · Eventos extremos</div>
+        <p>Una atmósfera más cálida retiene más vapor de agua, aumentando la intensidad de lluvias que provocan inundaciones repentinas y daños a infraestructura.</p>
+      </article>
+
+      <article class="card" data-cat="oceanos" data-text="subida del nivel del mar erosion costera marejadas">
+        <span class="tag">Océanos y costas</span>
+        <h3>Subida del nivel del mar y erosión</h3>
+        <div class="meta">Zonas costeras bajas · Tendencia</div>
+        <p>La expansión térmica del océano y el derretimiento de hielo terrestre elevan el nivel del mar, intensificando la erosión de playas y la intrusión salina en acuíferos.</p>
+      </article>
+
+      <article class="card" data-cat="oceanos" data-text="blanqueamiento coral arrecifes olas de calor marinas">
+        <span class="tag">Océanos y costas</span>
+        <h3>Blanqueamiento de arrecifes de coral</h3>
+        <div class="meta">Trópicos · Olas de calor marinas</div>
+        <p>El calentamiento del agua causa la expulsión de algas simbiontes de los corales, debilitando los arrecifes que protegen costas y sustentan pesquerías.</p>
+      </article>
+
+      <article class="card" data-cat="criosfera" data-text="retroceso glaciares disponibilidad de agua andes alpes himalaya">
+        <span class="tag">Glaciares</span>
+        <h3>Retroceso glaciar acelerado</h3>
+        <div class="meta">Alpes Andes Himalaya · Tendencia</div>
+        <p>Glaciares en retroceso reducen reservas de agua estacional y aumentan peligros como aluviones por vaciamiento de lagos glaciares.</p>
+      </article>
+
+      <article class="card" data-cat="ciclones" data-text="huracanes ciclones precipitacion intensa marejada ciclónica">
+        <span class="tag">Ciclones</span>
+        <h3>Más lluvia por ciclones intensos</h3>
+        <div class="meta">Océano Atlántico y Pacífico · Eventos</div>
+        <p>El aire más cálido y húmedo favorece precipitaciones extremas durante ciclones, con riesgos de inundación y deslizamientos tierra adentro.</p>
+      </article>
+
+      <article class="card" data-cat="agricultura" data-text="rendimientos cultivos olas de calor estres hidrico">
+        <span class="tag">Agricultura</span>
+        <h3>Estrés térmico en cultivos básicos</h3>
+        <div class="meta">Zonas agrícolas · Años cálidos</div>
+        <p>Las olas de calor durante floración o llenado de grano reducen rendimientos y calidad, especialmente en maíz y trigo, afectando precios y seguridad alimentaria.</p>
+      </article>
+
+      <article class="card" data-cat="salud" data-text="enfermedades transmitidas por vectores dengue expansion mosquitos">
+        <span class="tag">Salud</span>
+        <h3>Expansión de mosquitos vectores</h3>
+        <div class="meta">Zonas subtropicales a templadas · Tendencia</div>
+        <p>Temperaturas más altas y cambios en lluvias amplían la presencia de mosquitos que transmiten dengue, zika y chikungunya, elevando el riesgo sanitario.</p>
+      </article>
+
+      <article class="card" data-cat="inundación" data-text="ríos atmosfericos tormentas torrenciales infraestructura urbana">
+        <span class="tag">Lluvias e inundaciones</span>
+        <h3>Tormentas torrenciales en ciudades</h3>
+        <div class="meta">Ciudades de media y alta latitud · Eventos</div>
+        <p>La intensidad de lluvia supera la capacidad de drenaje urbano, causando encharcamientos, daños a transporte y viviendas.</p>
+      </article>
+
+      <article class="card" data-cat="sequía" data-text="megasequias incendios abastecimiento agua">
+        <span class="tag">Sequía</span>
+        <h3>Megasequías multianuales</h3>
+        <div class="meta">Regiones mediterráneas · Décadas secas</div>
+        <p>Periodos prolongados con déficit de precipitación y altas temperaturas agotan suelos y vegetación, elevando riesgo de incendios y afectando el abastecimiento urbano.</p>
+      </article>
+    </div>
+
+    <div id="empty" class="empty">No se encontraron casos con ese filtro o búsqueda.</div>
+
+    <section class="credits">
+      <p><strong>Nota:</strong> Esta es una página de demostración para fines educativos. Puedes editar, añadir o eliminar tarjetas para adaptarla a tu proyecto.</p>
+    </section>
+  </main>
+
+  <footer>
+    Hecho con ♥ en HTML, CSS y JS puros.
+  </footer>
+
+  <script>
+    // Filtro por texto y categoría
+    const q = document.getElementById('q');
+    const cat = document.getElementById('cat');
+    const grid = document.getElementById('grid');
+    const empty = document.getElementById('empty');
+
+    function applyFilters(){
+      const text = q.value.trim().toLowerCase();
+      const category = cat.value;
+      let visible = 0;
+
+      [...grid.children].forEach(card=>{
+        const matchesText = card.dataset.text.toLowerCase().includes(text) ||
+                            card.querySelector('h3').textContent.toLowerCase().includes(text);
+        const matchesCat = (category === 'todas') || (card.dataset.cat === category);
+        const show = matchesText && matchesCat;
+        card.style.display = show ? '' : 'none';
+        if(show) visible++;
+      });
+
+      empty.style.display = visible ? 'none' : 'block';
+    }
+
+    q.addEventListener('input', applyFilters);
+    cat.addEventListener('change', applyFilters);
+  </script>
+</body>
+</html>
+
